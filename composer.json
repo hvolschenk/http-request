@@ -1,0 +1,23 @@
+{
+  "name": "hvolschenk/http-request",
+  "description": "PHP functional HTTPRequest library.",
+  "require": {
+    "hvolschenk/utilities-array": "0.1.2",
+    "php": "^7.0"
+  },
+  "keywords": ["http", "php", "get", "post", "headers"],
+  "license": "MIT",
+  "homepage": "https://github.com/hvolschenk/http-request",
+  "authors": [
+    {
+      "name": "Hendrik Volschenk",
+      "email": "righteous.trespasser@gmail.com",
+      "homepage": "http://hvolschenk.co.za"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "src/index.php"
+    ]
+  }
+}
