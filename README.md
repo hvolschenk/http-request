@@ -23,7 +23,7 @@ GET(void): array;
 Returns the value of a single key in the list of query string parameters. Returns an empty string if
 the key is not available.
 
-```
+```php
 GETKey(string $key): string;
 ```
 
@@ -31,7 +31,7 @@ GETKey(string $key): string;
 
 Returns the list of HTTP request headers. Returns an empty array if none are available.
 
-```
+```php
 headers(void): array;
 ```
 
@@ -40,7 +40,7 @@ headers(void): array;
 Returns the value of a single key in the list of HTTP request headers. Returns an empty string if
 the key is not available.
 
-```
+```php
 headersKey(string $key): string;
 ```
 
@@ -48,7 +48,7 @@ headersKey(string $key): string;
 
 Returns the POST body. Returns an empty array if it is not available.
 
-```
+```php
 POST(void): array;
 ```
 
@@ -57,6 +57,20 @@ POST(void): array;
 Returns the value of a single key in the POST body. Returns an empty string if the key is not
 available.
 
-```
+```php
 POSTKey(string $key): string;
+```
+
+## Usage example:
+
+```php
+<?php
+  namespace Sample\Name\Space;
+  use function Hvolschenk\HTTPRequest\{ GETKey, headersKey, POST };
+
+  // ...
+
+  if (GETKey('canUpdate') === '1' && doUserAuthCheck(headersKey('Authorization'))) {
+    doUserUpdate(POST());
+  }
 ```
